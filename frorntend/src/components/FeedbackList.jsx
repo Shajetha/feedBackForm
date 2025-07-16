@@ -5,7 +5,7 @@ export default function FeedbackList() {
   const [feedbacks, setFeedbacks] = useState([]);
 
   useEffect(() => {
-  axios.get('http://localhost:5000/api/feedback')
+  axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/feedback`)
     .then(res => {
       console.log("Feedbacks fetched:", res.data);  // ADD THIS LINE
       setFeedbacks(res.data);

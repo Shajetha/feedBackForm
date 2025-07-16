@@ -13,7 +13,7 @@ export default function FeedbackForm() {
     e.preventDefault();
     const token = localStorage.getItem('token');
     try {
-      await axios.post('http://localhost:5000/api/feedback', form, {
+      await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/feedback`, form, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setStatus('Feedback submitted successfully!');
