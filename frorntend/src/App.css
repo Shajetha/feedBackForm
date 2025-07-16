@@ -1,0 +1,164 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL BODY */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* blue gradient */
+  color: #f0f0f0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* FORM CONTAINER */
+.form-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 30px 35px;
+  background: #ffffff0f;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+/* HEADINGS */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+/* INPUT FIELDS */
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #ffffff1a;
+  color: #fff;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #ffffff33;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #0056b3, #007bff);
+}
+
+button.logout-btn {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #dc3545, #a71d2a);
+}
+
+button.logout-btn:hover {
+  background: linear-gradient(90deg, #a71d2a, #dc3545);
+}
+
+/* FEEDBACK LIST */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ffffff10;
+  border-left: 4px solid #00bfff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: #f8f9fa;
+  backdrop-filter: blur(6px);
+}
+
+li strong {
+  font-size: 16px;
+  color: #fff;
+}
+
+li em {
+  font-size: 13px;
+  color: #ccc;
+}
+
+li p {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* MESSAGES */
+.text-danger {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.text-success {
+  color: #00d084;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* LINKS */
+.form-container p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.form-container a {
+  color: #00bfff;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+    margin: 40px 15px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
