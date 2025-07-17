@@ -9,15 +9,24 @@ const authRoutes = require('./routes/authRoutes'); // <-- this too if used
 dotenv.config();
 const app = express();
 
+const cors = require("cors");
+
 const allowedOrigins = [
-  'http://localhost:5173',                       // for local testing
-  'https://feed-back-form-cc24.vercel.app'      // your actual deployed frontend
+  "http://localhost:5173",
+  "https://feed-back-form-cc24.vercel.app"
 ];
 
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true, // if using cookies/auth headers
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
 }));
+
 
 app.use(express.json());
 
