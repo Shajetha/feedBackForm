@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
     try {
       console.log("Form data:", form);
-      const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/login`, form);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, form);
       localStorage.setItem('token', res.data.token);
       navigate('/feedback');
     } catch (err) {
